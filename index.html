@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+    <h2>TrustCart</h2>
+    <p>AI-Powered Smart Product Trust Score</p>
+    <link rel="stylesheet" href="style.css">
+</header>
+
+<body>
+
+    <!-- Landing -->
+    <div id="landing" class="container">
+        <h2>Shop Smarter with AI</h2>
+        <p>Analyze reviews and find trusted products easily.</p>
+        <button onclick="showPage('login')">Login</button>
+        <button onclick="showPage('signup')">Sign Up</button>
+    </div>
+
+    <!-- Login -->
+    <div id="login" class="container hidden">
+        <h2>Login</h2>
+        <input type="email" placeholder="Email"><br>
+        <input type="password" placeholder="Password"><br>
+        <button onclick="login()">Login</button>
+        <p>Don't have an account? <a onclick="showPage('signup')">Sign up</a></p>
+    </div>
+
+    <!-- Signup -->
+    <div id="signup" class="container hidden">
+        <h2>Sign Up</h2>
+        <input type="text" placeholder="Name"><br>
+        <input type="email" placeholder="Email"><br>
+        <input type="password" placeholder="Password"><br>
+        <button onclick="signup()">Sign Up</button>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="container hidden">
+        <h2>Dashboard</h2>
+
+        <!-- Search -->
+        <h3>Search Product</h3>
+        <input type="text" id="searchBox" placeholder="Enter product name">
+        <button onclick="search()">Search</button>
+
+        <!-- Product List -->
+        <h3>Products</h3>
+        <div id="productList"></div>
+
+        <!-- Add Review -->
+        <h3>Add Review</h3>
+        <input type="text" id="reviewText" placeholder="Write review">
+        <input type="number" id="rating" placeholder="Rating (1-5)">
+        <button onclick="addReview()">Submit Review</button>
+
+        <!-- Compare -->
+        <h3>Compare Products</h3>
+        <input type="text" id="p1" placeholder="Product 1">
+        <input type="text" id="p2" placeholder="Product 2">
+        <button onclick="compare()">Compare</button>
+
+        <div id="compareResult"></div>
+
+        <button onclick="showPage('landing')">Logout</button>
+    </div>
+
+    <!-- 404 -->
+    <div id="error" class="container hidden">
+        <h1>404</h1>
+        <p>Page Not Found</p>
+        <button onclick="showPage('landing')">Go Home</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
